@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'login.apps.LoginConfig',
+    'home.apps.HomeConfig',
+    'common.apps.CommonConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,4 +122,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# STATICFILES_DIRS = [
+#     'E:/Desktop/SoftwareEngineering/Software-Engineering-Final/lu_residence_webapp/common/static'
+# ]
+
+# STATICFILES_DIRS = (
+#      os.path.join(BASE_DIR, 'static'),
+# )
+
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/'
