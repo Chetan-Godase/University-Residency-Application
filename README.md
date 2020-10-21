@@ -1,7 +1,8 @@
 # Software-Engineering-Final
 
 ## Introduction
-Hey guys, I've created the skeleton we can work off of for our Django project.
+Hey guys, I've created the skeleton we can work off of for our Django project. I've incorporated bootstrap into the base.html so any template extending this one can use bootstrap 4 components. Please review my base.html along with login.html to get an idea of how template inheritance works in Django and what you need to include in your template.
+
 
 ## Quick Project Rundown
   1. lu_residence_webapp is the project name and contains all files required to run the website. You'll notice there is also a directory under this top project directory with the same name. The files contained in this sub-clone directory affect the entire project (have to do with configurations). 
@@ -39,6 +40,8 @@ Hey guys, I've created the skeleton we can work off of for our Django project.
   ```
 ## If we could all...
  - Keep our static files (html, css, js, etc.) in the common directory under their respective sub-directory (e.g. templates, static, images).
+ - Try not to change the base.html or base.css static files often if at all as these will affect all sub-templates (e.g. news, login, register, etc.)
  - Be specific with your commit summaries.
  - Only commit when finished a section/week (just don't commit for every small change.
+ - Don't move the login.html or register.html templates under the register directory as Django requires this due to built-in libraries for user authentication and authorization.
 
