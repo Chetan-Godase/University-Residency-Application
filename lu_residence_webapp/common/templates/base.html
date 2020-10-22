@@ -5,11 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href={% static "bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href="{% static "styles/base.css" %}">
     <title>{% block title %}LU Residence{% endblock %}</title>
 </head>
 
-<body class="text-center">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<body>
+
+    <div role="banner" id="top">
+        <div class="container-fluid" >
+            <a class="logo" href="{% url 'home:news' %}">
+                <img src="{% static "images/logo.png" %}" alt="Lakehead logo" width="70" height="70">
+            </a>
+            <p class="meta">Lakehead Residence</p>
+
+            <div role="navigation" class="container-fluid" id="nav-links">
+                <ul>
+                    <li>
+                        <a href="{% url 'home:news' %}">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Housing</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Accommodations</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:register' %}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-banner">
+        <div class="container-fluid">
+            <p id="pageIntro">
+                {% block intro %}
+                {% endblock %}
+            </p>
+        </div>
+    </div>
+
+    {% comment %}<nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="#">LU Residence</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,10 +84,11 @@
                 <input class="form-control" type="text" placeholder="Search">
             </form>
         </div>
-    </nav>
+    </nav>{% endcomment %}
+{% block content %}
+{% endblock %}
 
-    {% block content %}
-    {% endblock %}
+
     <script src={% static "bootstrap/js/bootstrap.min.js" %}></script>
 {#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>#}
