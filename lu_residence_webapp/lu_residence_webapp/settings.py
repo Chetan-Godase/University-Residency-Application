@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'lu_residence_webapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lu_webapp_development',
-        'USER': 'django_accnt',
-        'PASSWORD': 'cLP@dm*91',
+        'NAME': '', # Add your information
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
