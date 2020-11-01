@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load home_extras %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +20,32 @@
             <p class="meta">Lakehead Residence</p>
 
             <div role="navigation" class="container-fluid" id="nav-links">
-                <ul>
+                {% if user.is_authenticated %}
+                    <ul>
+                    <li>
+                        <a href="{% url 'home:news' %}">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Housing</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Accommodations</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    {% if user.is_authenticated and user.groups %}
+                        <li>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                    <ul>
                     <li>
                         <a href="{% url 'home:news' %}">News</a>
                     </li>
@@ -42,16 +68,29 @@
                         <a href="{% url 'home:register' %}">Register</a>
                     </li>
                 </ul>
+                {% endif %}
             </div>
         </div>
     </div>
 
     <div class="copy-banner">
         <div class="container-fluid">
-            <p id="pageIntro">
-                {% block intro %}
-                {% endblock %}
-            </p>
+        <div class="row">
+            <div class="col">
+                <p id="pageIntro">
+                    {% block intro %}
+                    {% endblock %}
+                </p>
+            </div>
+            <div class="col" >
+                {% if user.is_authenticated %}
+                    <p class="text-right" id="userCol">
+                        {{ user.username }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
         </div>
     </div>
 

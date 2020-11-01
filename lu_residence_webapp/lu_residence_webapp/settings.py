@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'lu_residence_webapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '', # Add your information
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'lu_webapp_development', # Add your information
+        'USER': 'django_accnt',
+        'PASSWORD': 'cLP@dm*91',
     }
 }
 
@@ -135,3 +135,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

@@ -95,11 +95,9 @@ div {
     display: block;
 }
 
-/*.container-fluid #title-container{*/
-/*    margin: 0 auto;*/
-/*    max-width: 2200px;*/
-/*    padding: 0 4.16667%;*/
-/*}*/
+#userCol {
+    padding-right: 45px;
+}
 
 .copy-banner {
     background: #72b9f4;
@@ -116,3 +114,4 @@ div {
     font-weight: 500;
     margin: 0.5em 0;
 }
+
