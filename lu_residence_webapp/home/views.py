@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.
+def landing(request):
+    return render(request, '../../common/templates/home/landing.html')
+
+
 def news(request):
     return render(request, '../../common/templates/home/news.html')
 
@@ -21,7 +25,7 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('home:news')
     else:
         form = UserCreationForm()
     return render(request, '../../common/templates/registration/register.html', {'form': form})
