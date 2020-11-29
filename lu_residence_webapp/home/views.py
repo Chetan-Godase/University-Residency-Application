@@ -10,6 +10,8 @@ def landing(request):
 
 def news(request):
     return render(request, '../../common/templates/home/news.html')
+def housing(request):
+    return render(request, '../../common/templates/home/housing.html')
 
 
 def faq(request):
