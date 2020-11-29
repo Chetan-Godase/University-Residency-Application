@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 def news(request):
     return render(request, '../../common/templates/home/news.html')
+def housing(request):
+    return render(request, '../../common/templates/home/housing.html')
 
 def register(request):
     if request.method == 'POST':

@@ -24,7 +24,7 @@
                         <a href="{% url 'home:news' %}">News</a>
                     </li>
                     <li>
-                        <a href="#">Housing</a>
+                        <a href="{% url 'home:housing' %}">Housing</a>
                     </li>
                     <li>
                         <a href="#">Pricing</a>
@@ -41,6 +41,8 @@
                     <li>
                         <a href="{% url 'home:register' %}">Register</a>
                     </li>
+
+
                 </ul>
             </div>
         </div>
@@ -79,6 +81,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home:register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:housing' %}">Housing</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-md-0">
