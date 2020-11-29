@@ -2,9 +2,15 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 
+
 # Create your views here.
 def news(request):
     return render(request, '../../common/templates/home/news.html')
+
+
+def faq(request):
+    return render(request, '../../common/templates/faq/faq.html')
+
 
 def register(request):
     if request.method == 'POST':
