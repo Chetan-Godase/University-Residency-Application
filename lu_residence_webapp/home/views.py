@@ -10,10 +10,36 @@ def landing(request):
 
 def news(request):
     return render(request, '../../common/templates/home/news.html')
+
+
 def housing(request):
     return render(request, '../../common/templates/home/housing.html')
+
+
 def fees(request):
     return render(request, '../../common/templates/fees/fees.html')
+
+
+def work_order(request):
+    return render(request, '../../common/templates/workorder/workorder.html')
+
+
+def repair_form(request):
+    return render(request, '../../common/templates/workorder/townhouse_repair.html')
+
+
+def bartley(request):
+    return render(request, '../../common/templates/workorder/bartley.html')
+
+
+def north_res(request):
+    return render(request, '../../common/templates/workorder/north_residence.html')
+
+
+def south_res(request):
+    return render(request, '../../common/templates/workorder/south_residence.html')
+
+
 def faq(request):
     return render(request, '../../common/templates/faq/faq.html')
 

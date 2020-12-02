@@ -31,7 +31,7 @@
                         <a href="{% url 'home:fees' %}">Pricing</a>
                     </li>
                     <li>
-                        <a href="#">Accommodations</a>
+                        <a href="{% url 'home:work_order' %}">Work Order</a>
                     </li>
                     <li>
                         <a href="{% url 'home:faq' %}">FAQ</a>
@@ -52,10 +52,7 @@
                         <a href="{% url 'home:housing' %}">Housing</a>
                     </li>
                     <li>
-                        <a href="#">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#">Accommodations</a>
+                        <a href="{% url 'home:fees' %}">Pricing</a>
                     </li>
                     <li>
                          <a href="{% url 'home:faq' %}">FAQ</a>
@@ -66,8 +63,6 @@
                     <li>
                         <a href="{% url 'home:register' %}">Register</a>
                     </li>
-
-
                 </ul>
                 {% endif %}
             </div>
