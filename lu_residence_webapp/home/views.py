@@ -16,6 +16,8 @@ def fees(request):
     return render(request, '../../common/templates/fees/fees.html')
 def faq(request):
     return render(request, '../../common/templates/faq/faq.html')
+def apply(request):
+    return render(request, '../../common/templates/apply/apply.html')
 
 
 def register(request):
