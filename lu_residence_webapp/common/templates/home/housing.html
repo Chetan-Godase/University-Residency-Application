@@ -22,7 +22,7 @@
         form {
             font-size: 13px;
         }
-        {#@media only screen and (max-width: 1000px) {#}
+        {#@media only screen and (max-width: 100px) {#}
         {#    #chilling {#}
         {#        display: none;#}
         {#    }#}
@@ -37,10 +37,10 @@
         }
         #slider figure {
         position: relative;
-        width: 600%;
+        width: 400%;
         margin: 0;
         left: 0;
-        animation: 15s slider infinite;
+        animation: 10s slider infinite;
         }
         #slider figure img {
         width: 20%;
@@ -72,6 +72,46 @@
          left:-300%;
          }
         }
+            #slider1 figure{
+        overflow: hidden;
+        }
+        #slider1 figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 10s slider infinite;
+        }
+        #slider1 figure img {
+        width: 20%;
+        float: right;
+        }
+            @keyframes slider1{
+         0%{
+         right:0;
+         }
+         20% {
+         right:0;
+         }
+         25% {
+         right:+100%;
+         }
+         45% {
+         right:+100%;
+         }
+         50% {
+         right:+200%;
+         }
+         70% {
+         right:+200%;
+         }
+         75% {
+         right:+300%;
+         }
+         95% {
+         right:+300%;
+         }
+        }
     </style>
 
 
@@ -88,11 +128,12 @@ All townhouse units are smoke-free.  Smoking is only permitted in designated out
       <div class="col-md-5">
           <div id="slider" >
               <figure>
-                  <img src="{% static 'images/townhouse.png' %}" alt="townhouse image" width=100% height="400" >
-                 <img src="{% static 'images/town2.png' %}" alt="townhouse image" width=100% height="400">
-                  <img src="{% static 'images/town3.png' %}" alt="townhouse image" width=100% height="400">
-                  <img src="{% static 'images/town4.png' %}" alt="townhouse image" width=100% height="400">
-                  <img src="{% static 'images/town5.png' %}" alt="townhouse image" width=100% height="400">
+                  <img src="{% static 'images/th/townhouse.png' %}" alt="townhouse image" width=30% height="350" >
+                <img src="{% static 'images/th/4 bedroom exterior.png' %}" alt="townhouse image" width=30% height="350" > 
+                  <img src="{% static 'images/th/townhouse accessible.png' %}" alt="townhouse image" width=30% height="350" >
+                  <img src="{% static 'images/th/townhouse_room-access-large.png' %}" alt="townhouse image"  width=30%       height="350">
+                  
+            
               </figure>
           </div>
 
@@ -118,11 +159,25 @@ All townhouse units are smoke-free.  Smoking is only permitted in designated out
 
     <div class="row featurette">
       <div class="col-md-7 order-md-1">
+          
         <h2 class="featurette-heading">The Apartments </h2>
         <p class="lead">North and South apartments are situated between Halliday Hall Residence and Bartley Residence. These apartments house upper-year students with certain units designated as accessible. Optional meal plans are available for your convenience.</p>
       </div>
+        
       <div class="col-md-5 order-md-1">
-          <img src="{% static 'images/apartment.png' %}" width=100%" height="400">
+    
+          <div id="slider" >
+              <figure>
+                  <img src="{% static 'images/ap/1.png' %}" alt="townhouse image" width=30% height="350" >
+                <img src="{% static 'images/ap/2.png' %}" alt="townhouse image" width=30% height="350" > 
+                  <img src="{% static 'images/ap/3.png' %}" alt="townhouse image" width=30% height="350" >
+                  <img src="{% static 'images/ap/4.png' %}" alt="townhouse image"  width=30% height="350">
+              </figure>
+          </div>
+
+
+      </div>
+    </div>
         <!--<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
       </div>
     </div>
